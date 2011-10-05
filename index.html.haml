@@ -1,0 +1,161 @@
+!!! Strict
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title The Virtual Business Card(vCard) by Mustafa Quilon for Themeforest
+    %link{:href => "styles/main.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    #outerWrapper
+      #contentWrapper
+        %ul#navMain
+          / You can change the order of the menu or the icons here
+          %li
+            %a{:href => "#home", :title => "home"}
+              %img{:alt => "Home", :src => "images/icons/home.gif"}/
+          %li
+            %a{:href => "#about", :title => "about"}
+              %img{:alt => "About", :src => "images/icons/about.gif"}/
+          %li
+            %a{:href => "#networks", :title => "networks"}
+              %img{:alt => "Networks", :src => "images/icons/network.gif"}/
+          %li
+            %a{:href => "#contact", :title => "contact"}
+              %img{:alt => "Contact", :src => "images/icons/contact.gif"}/
+        #content
+          #scrollWrapper
+            %ul
+              / Home Section Details
+              %li#home.section
+                %h1
+                  Mustafa Quilon
+                  %a.vcard{:href => "myVcard.vcf", :title => "Download vCard"}
+                    %img{:alt => "Download vCard", :src => "images/icons/vcard.gif"}/
+                  / Link to your vcard file
+                %h3 UI Designer / Front-end Web Developer / Evangelist
+                / end #home
+              / About Section Details
+              %li#about.section
+                %h2 About Me
+                %img.left{:alt => "Your Name", :src => "images/avatar.jpg"}/
+                %p
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultricies magna non lectus elementum consectetur. Aliquam erat volutpat. Nulla et imperdiet mauris. Etiam ac ante id arcu luctus suscipit non sed leo. Donec malesuada dapibus purus ac dictum. Vestibulum quis odio mi, et accumsan metus. Aliquam erat volutpat.
+                  %a{:href => "#"} Aenean ullamcorper
+                  lorem sed erat ullamcorper vitae facilisis ante pulvinar. Etiam varius facilisis porta. Sed vehicula consectetur condimentum. Nunc ornare, nisl sed semper varius, nibh ligula consequat augue, eu luctus lectus tortor vitae lectus. Donec ac velit ut massa egestas hendrerit.
+                %p
+                  Aliquam a lorem id
+                  %a{:href => "#"} felis
+                  adipiscing
+                  = succeed "." do
+                    %a{:href => "#"} ultrices
+                  Nunc interdum consequat fermentum. Aliquam at quam tortor. Suspendisse pharetra mi sit amet nulla posuere pellentesque in vitae sapien. Donec viverra lorem sed metus accumsan vitae aliquet odio laoreet. In lacinia mi non ipsum rutrum eget lacinia mi viverra. Praesent cursus condimentum mauris nec ultrices.
+                / end #about
+              / Network Section Details
+              %li#networks.section
+                %h2 Find Me
+                %ul
+                  %li
+                    %a.external{:href => "http://twitter.com/mustafaquilon"}
+                      %img{:alt => "Twitter", :src => "images/profiles/twitter.png"}/
+                      %strong Twitter
+                      twitter.com/mustafaquilon
+                  %li
+                    %a.external{:href => "http://facebook.com/mustafaquilon"}
+                      %img{:alt => "Facebook", :src => "images/profiles/facebook.png"}/
+                      = succeed "facebook.com/mustafaquilon" do
+                        %strong Facebook
+                  %li
+                    %a.external{:href => "http://linkedin.com/in/mustafaquilon"}
+                      %img{:alt => "LinkedIn", :src => "images/profiles/linkedin.png"}/
+                      = succeed "linkedin.com/in/mustafaquilon" do
+                        %strong LinkedIn
+                  %li
+                    %a.external{:href => "http://lastfm.com/"}
+                      %img{:alt => "lastfm", :src => "images/profiles/lastfm.png"}/
+                      %strong Last FM
+                      lastfm.com/profileName
+                  %li
+                    %a.external{:href => "http://flickr.com/"}
+                      %img{:alt => "flickr", :src => "images/profiles/flickr.png"}/
+                      %strong Flickr
+                      flickr.com/profileName
+                  %li
+                    %a.external{:href => "http://orkut.com/"}
+                      %img{:alt => "orkut", :src => "images/profiles/orkut.png"}/
+                      %strong Orkut
+                      orkut.com/profileName
+                  %li
+                    %a.external{:href => "http://digg.com/"}
+                      %img{:alt => "orkut", :src => "images/profiles/digg.png"}/
+                      %strong Digg
+                      digg.com/profileName
+                  %li
+                    %a.external{:href => "mailto:example@email.com"}
+                      %img{:alt => "orkut", :src => "images/profiles/google_wave.png"}/
+                      %strong Google Wave
+                      example@email.com
+                %p
+                  You can also find me on
+                  = succeed "," do
+                    %a.external{:href => "http://orkut.com"} Orkut
+                  = succeed "," do
+                    %a.external{:href => "http://stumbleupon.com"} StumbleUpon
+                  = succeed "," do
+                    %a.external{:href => "http://yahoo.com"} Yahoo
+                  = succeed "," do
+                    %a.external{:href => "http://delicious.com"} Delicious
+                  %a.external{:href => "http://technorati.com"} Technorati
+                  and
+                  = succeed "." do
+                    %a.external{:href => "http://vimeo.com"} Vimeo
+                / end #networks
+              / Contact Section Details
+              %li#contact.section
+                %h2 Contact
+                #addressDetails
+                  %h3 Your Name/Title
+                  %p
+                    Street/Road Name,
+                    %br/
+                    Address Line 2,
+                    %br/
+                    Locality, Area,
+                    %br/
+                    CityName: 600 001,
+                  %p
+                    %strong Tel:
+                    +91 044 1254 4125
+                    %br/
+                    %strong Cell:
+                    + 91 98562 12541
+                    %br/
+                    %strong Email:
+                    %a{:href => "mailto:example@email.com"} example@domain.com
+                    / For additional security it is advisable to encrypt this email id using http://hivelogic.com/enkoder/form
+                  / end #about
+                #contactForm
+                  #note
+                  %form.contact{:action => "javascript:alert('error!');"}
+                    / Change your email id in the config.php file
+                    .field
+                      %label{:for => "name"} Name
+                      %input#name.text{:name => "name", :type => "text", :value => ""}/
+                    .field
+                      %label{:for => "email"} E-Mail
+                      %input#email.text{:name => "email", :type => "text", :value => ""}/
+                    .field
+                      %label{:for => "message"} Message
+                      %textarea#message.textbox{:cols => "25", :name => "message", :rows => "3"}
+                    .buttons
+                      %input.submit{:type => "submit", :value => "Submit"}/
+                      %input.submit.reset{:type => "reset", :value => "Reset"}/
+                  / end #contactForm
+                / end #contact
+            / end #scrollWrapper
+          / end #content
+        / end #contentWrapper
+      / end #outerWrapper
+    %p#copyright Mustafa Quilon &amp; Themeforest. All Rights Reserved.
+    %script{:src => "scripts/jquery-1.3.2.min.js", :type => "text/javascript"}
+    %script{:src => "scripts/jquery-scrollTo-localScroll.js", :type => "text/javascript"}
+    %script{:src => "scripts/qtip.js", :type => "text/javascript"}
+    %script{:src => "scripts/main.js", :type => "text/javascript"}

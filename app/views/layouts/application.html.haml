@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title Don Pottinger vBusiness Card
+    = stylesheet_link_tag :all   
+    = csrf_meta_tag
+  %body
+    = yield
+  = javascript_include_tag :defaults    
+  = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js'    
+  = javascript_include_tag '/javascripts/jquery-scrollTo-localScroll.js'
+  = javascript_include_tag '/javascripts/main.js'
+  = javascript_include_tag '/javascripts/qtip.js'  

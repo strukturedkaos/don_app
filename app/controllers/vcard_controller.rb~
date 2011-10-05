@@ -1,0 +1,6 @@
+class VcardController < ApplicationController
+  
+  def index
+    @title = "Don Pottinger"
+  end
+end
