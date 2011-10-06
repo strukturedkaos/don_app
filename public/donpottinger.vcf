@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Don Pottinger
+N:Pottinger;Don;;;
+EMAIL;TYPE=INTERNET:don.pottinger@gmail.com
+item1.URL:http\://donapottinger.com
+item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL:http\://strukturedkaos.com
+item2.X-ABLabel:BLOG
+END:VCARD

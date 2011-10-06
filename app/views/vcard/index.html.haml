@@ -21,7 +21,7 @@
           %li#home.section
             %h1
               = @name
-              %a.vcard{:href => "myVcard.vcf", :title => "Download vCard"}
+              %a.vcard{:href => "donpottinger.vcf", :title => "Download vCard"}
                 %img{:alt => "Download vCard", :src => "images/icons/vcard.gif"}/
               / Link to your vcard file
             %h3 Web Developer | Entrepreneur | Consultant
@@ -29,15 +29,15 @@
           / About Section Details
           %li#about.section
             %h2 About Me
-            %img.left{:alt => "Your Name", :src => "images/avatar.jpg"}/
+            %img.left{:alt => "Don A. Pottinger", :src => "images/donavatar.png"}/
             %p
               Curious, driven and talented Management Consultant, Business Analyst, and Project Manager by day and Entrepreneur and Web
-              Developer by night, with a penchant for solving various problems in heterogeneous markets from Communication and High Tech, Public\
-              Service, Fitness, and Real Estate.
-              Specialties
+              Developer by night, with a penchant for solving various problems in heterogeneous markets from Fitness, Communication and High Tech, Public Service and Real Estate.
+            %strong Specialties
             %p
-              Web development, Ruby, Rails, Linux, Ubuntu, software development, IT business strategy, business analysis, business case\
-              development
+              Technical - Web development using Ruby on Rails, Javascript and jQuery
+            %strong Current Projects
+            %p AIS
             / end #about
           / Network Section Details
           %li#networks.section
@@ -76,7 +76,7 @@
               %h3 Don Pottinger
               %p
                 %strong Email:
-                %a{:href => "mailto:don.pottinger@gmail.com"} don.pottinger@gmail.com
+                = mail_to "don.pottinger@gmail.com", "don.pottinger[at]gmail.com"
                 / For additional security it is advisable to encrypt this email id using http://hivelogic.com/enkoder/form
               / end #about
             #contactForm
@@ -101,4 +101,4 @@
       / end #content
     / end #contentWrapper
   / end #outerWrapper
-%p#copyright DonAPottinger.com All Rights Reserved.
+%p#copyright= "DonAPottinger.com All Rights Reserved."

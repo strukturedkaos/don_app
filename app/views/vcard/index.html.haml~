@@ -1,110 +1,104 @@
-!!! Strict
-%html{:xmlns => "http://www.w3.org/1999/xhtml"}
-  %head
-    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
-    %title= @title
-  %body
-    #outerWrapper
-      #contentWrapper
-        %ul#navMain
-          / You can change the order of the menu or the icons here
-          %li
-            %a{:href => "#home", :title => "home"}
-              %img{:alt => "Home", :src => "images/icons/home.gif"}/
-          %li
-            %a{:href => "#about", :title => "about"}
-              %img{:alt => "About", :src => "images/icons/about.gif"}/
-          %li
-            %a{:href => "#networks", :title => "networks"}
-              %img{:alt => "Networks", :src => "images/icons/network.gif"}/
-          %li
-            %a{:href => "#contact", :title => "contact"}
-              %img{:alt => "Contact", :src => "images/icons/contact.gif"}/
-        #content
-          #scrollWrapper
+#outerWrapper
+  #contentWrapper
+    %ul#navMain
+      / You can change the order of the menu or the icons here
+      %li
+        %a{:href => "#home", :title => "home"}
+          %img{:alt => "Home", :src => "images/icons/home.gif"}/
+      %li
+        %a{:href => "#about", :title => "about"}
+          %img{:alt => "About", :src => "images/icons/about.gif"}/
+      %li
+        %a{:href => "#networks", :title => "networks"}
+          %img{:alt => "Networks", :src => "images/icons/network.gif"}/
+      %li
+        %a{:href => "#contact", :title => "contact"}
+          %img{:alt => "Contact", :src => "images/icons/contact.gif"}/
+    #content
+      #scrollWrapper
+        %ul
+          / Home Section Details
+          %li#home.section
+            %h1
+              = @name
+              %a.vcard{:href => "donpottinger.vcf", :title => "Download vCard"}
+                %img{:alt => "Download vCard", :src => "images/icons/vcard.gif"}/
+              / Link to your vcard file
+            %h3 Web Developer | Entrepreneur | Consultant
+            / end #home
+          / About Section Details
+          %li#about.section
+            %h2 About Me
+            %img.left{:alt => "Don A. Pottinger", :src => "images/donavatar.png"}/
+            %p
+              Curious, driven and talented Management Consultant, Business Analyst, and Project Manager by day and Entrepreneur and Web
+              Developer by night, with a penchant for solving various problems in heterogeneous markets from Fitness, Communication and High Tech, Public Service and Real Estate.
+            %strong Specialties
+            %p
+              Technical - Web development using Ruby on Rails, Javascript and jQuery
+            strong% Current Projects
+            %p AIS
+            / end #about
+          / Network Section Details
+          %li#networks.section
+            %h2 Find Me
             %ul
-              / Home Section Details
-              %li#home.section
-                %h1
-                  = @name
-                  %a.vcard{:href => "myVcard.vcf", :title => "Download vCard"}
-                    %img{:alt => "Download vCard", :src => "images/icons/vcard.gif"}/
-                  / Link to your vcard file
-                %h3 Web Developer | Entrepreneur | Consultant
-                / end #home
-              / About Section Details
-              %li#about.section
-                %h2 About Me
-                %img.left{:alt => "Your Name", :src => "images/avatar.jpg"}/
-                %p
-                  Curious, driven and talented Management Consultant, Business Analyst, and Project Manager by day and Entrepreneur and Web
-                  Developer by night, with a penchant for solving various problems in heterogeneous markets from Communication and High Tech, Public\
-                  Service, Fitness, and Real Estate.
-                  Specialties
-                %p
-                  Web development, Ruby, Rails, Linux, Ubuntu, software development, IT business strategy, business analysis, business case\
-                  development
-                / end #about
-              / Network Section Details
-              %li#networks.section
-                %h2 Find Me
-                %ul
-                  %li
-                    %a.external{:href => "http://strukturedkaos.com"}
-                      %img{:alt => "Struktured Kaos", :src => "images/profiles/wordpress.png"}/
-                      = succeed "strukturedkaos.com" do
-                        %strong Blog                
-                  %li
-                    %a.external{:href => "http://twitter.com/donpottinger"}
-                      %img{:alt => "Twitter", :src => "images/profiles/twitter.png"}/
-                      %strong Twitter
-                      twitter.com/donpottinger
-                  %li
-                    %a.external{:href => "http://facebook.com/donpot"}
-                      %img{:alt => "Facebook", :src => "images/profiles/facebook.png"}/
-                      = succeed "facebook.com/donpot" do
-                        %strong Facebook
-                  %li
-                    %a.external{:href => "https://plus.google.com/106936387167997377706/"}
-                      %img{:alt => "Google Plus", :src => "images/profiles/google_plus.png"}/
-                      = succeed "profiles.google.com/donpottinger" do
-                        %strong Google Plus
-                  %li
-                    %a.external{:href => "http://www.linkedin.com/in/donpottinger"}
-                      %img{:alt => "LinkedIn", :src => "images/profiles/linkedin.png"}/
-                      = succeed "linkedin.com/in/donpottinger" do
-                        %strong LinkedIn
-                / end #networks
-              / Contact Section Details
-              %li#contact.section
-                %h2 Contact
-                #addressDetails
-                  %h3 Don Pottinger
-                  %p
-                    %strong Email:
-                    %a{:href => "mailto:don.pottinger@gmail.com"} don.pottinger@gmail.com
-                    / For additional security it is advisable to encrypt this email id using http://hivelogic.com/enkoder/form
-                  / end #about
-                #contactForm
-                  #note
-                  %form.contact{:action => "javascript:alert('error!');"}
-                    / Change your email id in the config.php file
-                    .field
-                      %label{:for => "name"} Name
-                      %input#name.text{:name => "name", :type => "text", :value => ""}/
-                    .field
-                      %label{:for => "email"} E-Mail
-                      %input#email.text{:name => "email", :type => "text", :value => ""}/
-                    .field
-                      %label{:for => "message"} Message
-                      %textarea#message.textbox{:cols => "25", :name => "message", :rows => "3"}
-                    .buttons
-                      %input.submit{:type => "submit", :value => "Submit"}/
-                      %input.submit.reset{:type => "reset", :value => "Reset"}/
-                  / end #contactForm
-                / end #contact
-            / end #scrollWrapper
-          / end #content
-        / end #contentWrapper
-      / end #outerWrapper
-    %p#copyright Don Pottinger. All Rights Reserved.
+              %li
+                %a.external{:href => "http://strukturedkaos.com"}
+                  %img{:alt => "Struktured Kaos", :src => "images/profiles/wordpress.png"}/
+                  = succeed "strukturedkaos.com" do
+                    %strong Blog                
+              %li
+                %a.external{:href => "http://twitter.com/donpottinger"}
+                  %img{:alt => "Twitter", :src => "images/profiles/twitter.png"}/
+                  %strong Twitter
+                  twitter.com/donpottinger
+              %li
+                %a.external{:href => "http://facebook.com/donpot"}
+                  %img{:alt => "Facebook", :src => "images/profiles/facebook.png"}/
+                  = succeed "facebook.com/donpot" do
+                    %strong Facebook
+              %li
+                %a.external{:href => "https://plus.google.com/106936387167997377706/"}
+                  %img{:alt => "Google Plus", :src => "images/profiles/google_plus.png"}/
+                  = succeed "profiles.google.com/donpottinger" do
+                    %strong Google Plus
+              %li
+                %a.external{:href => "http://www.linkedin.com/in/donpottinger"}
+                  %img{:alt => "LinkedIn", :src => "images/profiles/linkedin.png"}/
+                  = succeed "linkedin.com/in/donpottinger" do
+                    %strong LinkedIn
+            / end #networks
+          / Contact Section Details
+          %li#contact.section
+            %h2 Contact
+            #addressDetails
+              %h3 Don Pottinger
+              %p
+                %strong Email:
+                = mail_to "don.pottinger@gmail.com", "don.pottinger[at]gmail.com"
+                / For additional security it is advisable to encrypt this email id using http://hivelogic.com/enkoder/form
+              / end #about
+            #contactForm
+              #note
+              %form.contact{:action => "javascript:alert('error!');"}
+                / Change your email id in the config.php file
+                .field
+                  %label{:for => "name"} Name
+                  %input#name.text{:name => "name", :type => "text", :value => ""}/
+                .field
+                  %label{:for => "email"} E-Mail
+                  %input#email.text{:name => "email", :type => "text", :value => ""}/
+                .field
+                  %label{:for => "message"} Message
+                  %textarea#message.textbox{:cols => "25", :name => "message", :rows => "3"}
+                .buttons
+                  %input.submit{:type => "submit", :value => "Submit"}/
+                  %input.submit.reset{:type => "reset", :value => "Reset"}/
+              / end #contactForm
+            / end #contact
+        / end #scrollWrapper
+      / end #content
+    / end #contentWrapper
+  / end #outerWrapper
+%p#copyright= "DonAPottinger.com All Rights Reserved."
