@@ -98,26 +98,7 @@ jQuery(function(){
 						   jQuery.ajax({
 						   type: "POST",
 						   url: "contact",
-						   data: str,
-						   success: function(msg){
-		jQuery("#note").ajaxComplete(function(event, request, settings){
-		jQuery("#note").show();
-		if(msg == 'OK') // Message Sent? Show the 'Thank You' message and hide the form
-		{
-		result = '<span class="notification_ok">Your message has been sent. Thank you!</span>';
-		jQuery(".contact").hide();
-		}
-		else
-		{
-			result = msg;	
-			
-		}
-
-		jQuery(this).html(result);
-
-		});
-
-		}
+						   data: str
 						 });
 
 		return false;

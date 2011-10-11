@@ -12,12 +12,14 @@ class VcardController < ApplicationController
 #$message = htmlspecialchars($_POST['message']);
 
   @name = params[:name]
-  @email = params[:email]    
-  @subject = "Contact Form Submission"
-  @message = params[:email]
+  @email = params[:email].strip    
+#  @subject = "Contact Form Submission"
+  @message = params[:message]
+  
+  ContactMailer.contact_email(@name, @email, @message).deliver
 
   respond_to do |format|
-    format.js { render :msg => "OK" }
+    format.js { render 'contact' }
   end
   
   end

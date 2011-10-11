@@ -31,13 +31,15 @@
             %h2 About Me
             %img.left{:alt => "Don A. Pottinger", :src => "images/donavatar.png"}/
             %p
-              Curious, driven and talented Management Consultant, Business Analyst, and Project Manager by day and Entrepreneur and Web
-              Developer by night, with a penchant for solving various problems in heterogeneous markets from Fitness, Communication and High Tech, Public Service and Real Estate.
+              Web developer, entrepreneur and consultant with a penchant for solving various problems in heterogeneous markets from Fitness, Communication and High Tech, Public Service and Real Estate.
             %strong Specialties
             %p
               Technical - Web development using Ruby on Rails, Javascript and jQuery
             %strong Current Projects
-            %p AIS
+            %ul
+              %li Athletic Intelligence Systems
+              %li MLS Soccer Survivor web app
+            
             / end #about
           / Network Section Details
           %li#networks.section
@@ -72,8 +74,6 @@
           / Contact Section Details
           %li#contact.section
             %h2 Contact
-                / For additional security it is advisable to encrypt this email id using http://hivelogic.com/enkoder/form
-              / end #about
             #contactForm
               #note
               %form.contact{:action => "javascript:alert('error!');"}
@@ -96,4 +96,4 @@
       / end #content
     / end #contentWrapper
   / end #outerWrapper
-%p#copyright= "DonAPottinger.com All Rights Reserved."
+%p#copyright= "donapottinger.com All Rights Reserved."

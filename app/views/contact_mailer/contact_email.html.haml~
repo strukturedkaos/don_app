@@ -1,0 +1,8 @@
+!!!
+%html
+  %head
+  %body
+    %h1= "donapottinger.com - #{@subject}"
+    %p= "From #{@name} - #{@email}"
+    %p= @message
+      
