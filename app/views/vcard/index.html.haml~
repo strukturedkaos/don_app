@@ -1,7 +1,6 @@
 #outerWrapper
   #contentWrapper
     %ul#navMain
-      / You can change the order of the menu or the icons here
       %li
         %a{:href => "#home", :title => "home"}
           %img{:alt => "Home", :src => "images/icons/home.gif"}/
@@ -31,7 +30,7 @@
             %h2 About Me
             %img.left{:alt => "Don A. Pottinger", :src => "images/donavatar.png"}/
             %p
-              Web developer, entrepreneur and consultant with a penchant for solving various problems in heterogeneous markets from Fitness, Communication and High Tech, Public Service and Real Estate.
+              Web developer, entrepreneur and consultant with a passion for solving various problems in heterogeneous markets from Fitness, Communication and High Tech, Public Service and Real Estate.
             %strong Specialties
             %p
               Technical - Web development using Ruby on Rails, Javascript and jQuery
@@ -76,20 +75,19 @@
             %h2 Contact
             #contactForm
               #note
-              %form.contact{:action => "javascript:alert('error!');"}
-                / Change your email id in the config.php file
+              = form_for @contact, :remote => true, :url => contact_path, :html => { :class => "contact" } do |f|
                 .field
-                  %label{:for => "name"} Name
-                  %input#name.text{:name => "name", :type => "text", :value => ""}/
+                  = f.label :name
+                  = f.text_field :name, :class => "text"
                 .field
-                  %label{:for => "email"} E-Mail
-                  %input#email.text{:name => "email", :type => "text", :value => ""}/
+                  = f.label :email
+                  = f.text_field :email, :class => "text"
                 .field
-                  %label{:for => "message"} Message
-                  %textarea#message.textbox{:cols => "25", :name => "message", :rows => "3"}
+                  = f.label :message, "Message"
+                  = f.text_area :message, :rows => 6
                 .buttons
-                  %input.submit{:type => "submit", :value => "Submit"}/
-                  %input.submit.reset{:type => "reset", :value => "Reset"}/
+                  = f.submit "Submit"
+                  %input.submit.reset{:type => "reset", :value => "Reset"}/                
               / end #contactForm
             / end #contact
         / end #scrollWrapper

@@ -91,19 +91,19 @@ jQuery(function(){
 	}
 	});
 	// ------ Contact Form Validation
-	jQuery("form.contact").submit(function(){
+//	jQuery("form.contact").submit(function(){
 
-		var str = jQuery("form.contact").serialize();
+//		var str = jQuery("form.contact").serialize();
 
-						   jQuery.ajax({
-						   type: "POST",
-						   url: "contact",
-						   data: str
-						 });
+//						   jQuery.ajax({
+//						   type: "POST",
+//						   url: "contact",
+//						   data: str
+//						 });
 
-		return false;
+//		return false;
 
-	});
+//	});
 	
 	// ------ Copyright Animation	
 	jQuery("p#copyright").hover(function () {

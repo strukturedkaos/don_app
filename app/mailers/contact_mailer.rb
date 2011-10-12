@@ -1,9 +1,8 @@
 class ContactMailer < ActionMailer::Base
-  default :from => "contact@donapottinger.com"
+  default :to => "don.pottinger@gmail.com"
   
-  def contact_email(name, email, message)
-    @name = name
-    @message = message
-    mail(:to => "don.pottinger@gmail.com", :from => email, :subject => "Contact Form Submission")
+  def contact_email(contact)
+    @contact = contact
+    mail(:from => @contact.email, :subject => "Contact Form Submission")
   end
 end
