@@ -97,7 +97,7 @@ jQuery(function(){
 
 						   jQuery.ajax({
 						   type: "POST",
-						   url: "contact",
+						   url: "vcard/contact",
 						   data: str,
 						   success: function(msg){
 		jQuery("#note").ajaxComplete(function(event, request, settings){

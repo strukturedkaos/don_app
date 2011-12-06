@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Web Developer | Entrepreneur | Consultant - Don A. Pottinger
+    %title Don Pottinger vBusiness Card
     = stylesheet_link_tag :all   
     = csrf_meta_tag
   %body

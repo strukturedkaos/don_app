@@ -15,10 +15,6 @@ class VcardController < ApplicationController
   @email = params[:email]    
   @subject = "Contact Form Submission"
   @message = params[:email]
-
-  respond_to do |format|
-    format.js { render :msg => "OK" }
-  end
   
   end
 end
