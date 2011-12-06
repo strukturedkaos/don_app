@@ -29,14 +29,25 @@
             %h2 About Me
             %img.left{:alt => "Don A. Pottinger", :src => "images/donavatar.png"}/
             %p
+<<<<<<< HEAD
               Curious, driven and talented Management Consultant, Business Analyst, and Project Manager by day and Entrepreneur and Web
               Developer by night, with a penchant for solving various problems in heterogeneous markets from Fitness to Communication and High Tech.
+=======
+              Web developer, entrepreneur and consultant with a passion for solving various problems in heterogeneous markets from Fitness, Communication and High Tech, Public Service and Real Estate.
+>>>>>>> 37eb2ac70966b18f422c6e2c29c5ee8f1138fd9f
             %strong Specialties
             %p
               Ruby on Rails, Javascript and jQuery
             %strong Current Projects
+<<<<<<< HEAD
             %p 
               Body Boss
+=======
+            %ul
+              %li Athletic Intelligence Systems
+              %li MLS Soccer Survivor web app
+            
+>>>>>>> 37eb2ac70966b18f422c6e2c29c5ee8f1138fd9f
             / end #about
           / Network Section Details
           %li#networks.section
@@ -71,6 +82,7 @@
           / Contact Section Details
           %li#contact.section
             %h2 Contact
+<<<<<<< HEAD
             #addressDetails
               %h3 Don Pottinger
               %p
@@ -93,22 +105,23 @@
                   //]]>
                   </script>
               / end #about
+=======
+>>>>>>> 37eb2ac70966b18f422c6e2c29c5ee8f1138fd9f
             #contactForm
               #note
-              %form.contact{:action => "javascript:alert('error!');"}
-                / Change your email id in the config.php file
+              = form_for @contact, :remote => true, :url => contact_path, :html => { :class => "contact" } do |f|
                 .field
-                  %label{:for => "name"} Name
-                  %input#name.text{:name => "name", :type => "text", :value => ""}/
+                  = f.label :name
+                  = f.text_field :name, :class => "text"
                 .field
-                  %label{:for => "email"} E-Mail
-                  %input#email.text{:name => "email", :type => "text", :value => ""}/
+                  = f.label :email
+                  = f.text_field :email, :class => "text"
                 .field
-                  %label{:for => "message"} Message
-                  %textarea#message.textbox{:cols => "25", :name => "message", :rows => "3"}
+                  = f.label :message, "Message"
+                  = f.text_area :message, :rows => 6
                 .buttons
-                  %input.submit{:type => "submit", :value => "Submit"}/
-                  %input.submit.reset{:type => "reset", :value => "Reset"}/
+                  = f.submit "Submit", :class => "submit"
+                  %input.submit.reset{:type => "reset", :value => "Reset"}/                
               / end #contactForm
             / end #contact
         / end #scrollWrapper

@@ -91,38 +91,19 @@ jQuery(function(){
 	}
 	});
 	// ------ Contact Form Validation
-	jQuery("form.contact").submit(function(){
+//	jQuery("form.contact").submit(function(){
 
-		var str = jQuery("form.contact").serialize();
+//		var str = jQuery("form.contact").serialize();
 
-						   jQuery.ajax({
-						   type: "POST",
-						   url: "contact",
-						   data: str,
-						   success: function(msg){
-		jQuery("#note").ajaxComplete(function(event, request, settings){
-		jQuery("#note").show();
-		if(msg == 'OK') // Message Sent? Show the 'Thank You' message and hide the form
-		{
-		result = '<span class="notification_ok">Your message has been sent. Thank you!</span>';
-		jQuery(".contact").hide();
-		}
-		else
-		{
-			result = msg;	
-			
-		}
+//						   jQuery.ajax({
+//						   type: "POST",
+//						   url: "contact",
+//						   data: str
+//						 });
 
-		jQuery(this).html(result);
+//		return false;
 
-		});
-
-		}
-						 });
-
-		return false;
-
-	});
+//	});
 	
 	// ------ Copyright Animation	
 	jQuery("p#copyright").hover(function () {

@@ -3,22 +3,21 @@ class VcardController < ApplicationController
   def index
     @title = "Don Pottinger vBusiness Card"
     @name = "Don Pottinger"
+    @contact = Contact.new
   end
   
   def contact
-#$name = stripslashes($_POST['name']);
-#$email = trim($_POST['email']);
-#$subject ="Contact Form Submission";
-#$message = htmlspecialchars($_POST['message']);
+    
+    @contact = Contact.new(params[:contact])
+    
+    if @contact.valid?
+      ContactMailer.contact_email(@contact).deliver
 
-  @name = params[:name]
-  @email = params[:email]    
-  @subject = "Contact Form Submission"
-  @message = params[:email]
-
-  respond_to do |format|
-    format.js { render :msg => "OK" }
+      render 'contact.js.haml'
+    else
+      render 'error.js.haml', :locals => { :item => @contact }
+    end
+    
   end
   
-  end
 end
