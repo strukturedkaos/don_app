@@ -7,7 +7,7 @@
   %body
     = yield
   = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js'
-  = javascript_include_tag :all, :cache => "all"
+  = javascript_include_tag "rails.js", "application.js", "jquery-scrollTo-localScroll.js", "main.js", "qtip.js", :cache => "all"
 //  = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js', '/javascripts/jquery-scrollTo-localScroll.js', '/javascripts/main.js',javascript_include_tag '/javascripts/qtip.js', javascript_include_tag '/javascripts/qtip.js'
 
 //  =javascript_include_tag "prototype.js", "scriptaculous.js?load=effects", "application.js", :cache => "all"  
