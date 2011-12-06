@@ -1,7 +1,6 @@
 #outerWrapper
   #contentWrapper
     %ul#navMain
-      / You can change the order of the menu or the icons here
       %li
         %a{:href => "#home", :title => "home"}
           %img{:alt => "Home", :src => "images/icons/home.gif"}/
@@ -23,7 +22,6 @@
               = @name
               %a.vcard{:href => "donpottinger.vcf", :title => "Download vCard"}
                 %img{:alt => "Download vCard", :src => "images/icons/vcard.gif"}/
-              / Link to your vcard file
             %h3 Web Developer | Entrepreneur | Consultant
             / end #home
           / About Section Details
@@ -32,12 +30,13 @@
             %img.left{:alt => "Don A. Pottinger", :src => "images/donavatar.png"}/
             %p
               Curious, driven and talented Management Consultant, Business Analyst, and Project Manager by day and Entrepreneur and Web
-              Developer by night, with a penchant for solving various problems in heterogeneous markets from Fitness, Communication and High Tech, Public Service and Real Estate.
+              Developer by night, with a penchant for solving various problems in heterogeneous markets from Fitness to Communication and High Tech.
             %strong Specialties
             %p
-              Technical - Web development using Ruby on Rails, Javascript and jQuery
+              Ruby on Rails, Javascript and jQuery
             %strong Current Projects
-            %p AIS
+            %p 
+              Body Boss
             / end #about
           / Network Section Details
           %li#networks.section
@@ -76,8 +75,23 @@
               %h3 Don Pottinger
               %p
                 %strong Email:
-                = mail_to "don.pottinger@gmail.com", "don.pottinger[at]gmail.com"
-                / For additional security it is advisable to encrypt this email id using http://hivelogic.com/enkoder/form
+                
+                :plain
+                  <script type="text/javascript">
+                  //<![CDATA[
+                  <!--
+                  var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!" +
+                  "=92){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return o" +
+                  ".substr(0,ol);}f(\")05,\\\"[oet~e;vd:96t\\\\'=5310\\\\#',!,720\\\\=)430\\\\" +
+                  "4 #-+54PN`HT^bVXR310\\\\620\\\\o320\\\\T]710\\\\BDMFo310\\\\t230\\\\CIPJV10" +
+                  "0\\\\200\\\\Csr771\\\\5vpyzqT`uibc|rkr.320\\\\420\\\\530\\\\M230\\\\700\\\\" +
+                  "530\\\\600\\\\410\\\\600\\\\K;X500\\\\400\\\\-5{8kw{?#(? 52m5QXVLTZW\\\"(f}" +
+                  ";o nruter};))++y(^)i(tAedoCrahc.x(edoCrahCmorf.gnirtS=+o;721=%y;++y)05<i(fi" +
+                  "{)++i;l<i;0=i(rof;htgnel.x=l,\\\"\\\"=o,i rav{)y,x(f noitcnuf\")"            ;
+                  while(x=eval(x));
+                  //-->
+                  //]]>
+                  </script>
               / end #about
             #contactForm
               #note
@@ -101,4 +115,4 @@
       / end #content
     / end #contentWrapper
   / end #outerWrapper
-%p#copyright= "DonAPottinger.com All Rights Reserved."
+%p#copyright= "donapottinger.com All Rights Reserved."
